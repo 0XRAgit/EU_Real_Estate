@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/fon_start">
+
+    <LinearLayout
+        android:id="@+id/main_lin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="5dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ВХОД И РЕГИСТРАЦИЯ"
+            android:gravity="center"
+            android:fontFamily="@font/robotocondensed_bold"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Логин:"
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans_light"
+                android:textColor="@color/ne_vazh"
+                android:textSize="20sp"
+                />
+            <com.github.pinball83.maskededittext.MaskedEditText
+                android:id="@+id/masked_edit_text"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:mask="+7(###)###-##-##"
+                app:notMaskedSymbol="#"
+                app:maskIconColor="@color/ramka_poley"
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пароль:"
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans_light"
+                android:textColor="@color/ne_vazh"
+                android:textSize="20sp"
+                />
+            <com.marlonmafra.android.widget.EditTextPassword
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                app:iconPosition="right"
+                android:drawableTint="@color/ne_vazh"
+                app:hidePasswordIcon="@drawable/ic_hide_password"
+                app:showPasswordIcon="@drawable/ic_show_password"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/vhod_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/main_lin"
+        android:layout_below="@+id/main_lin"
+        android:fontFamily="@font/robotocondensed_bold"
+        android:layout_gravity="left"
+        android:textColor="#eaebea"
+        android:text="ВОЙТИ"
+        app:defaultColor="@color/ne_vazh"/>
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/reg_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/main_lin"
+        android:layout_below="@+id/main_lin"
+        android:textColor="#eaebea"
+        android:padding="10dp"
+        android:layout_gravity="right"
+        android:fontFamily="@font/robotocondensed_bold"
+        android:text="Регистрация"
+        app:defaultColor="@color/ne_vazh"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/ne_vazh"
+        android:fontFamily="@font/open_sans_light"
+        android:layout_alignParentBottom="true"
+        android:padding="15sp"
+        android:gravity="center"
+        android:text="При входе или регистрации вы принимаете условия
+Пользовательского соглашения и Политики конфиденциальности"
+        />
+
+</RelativeLayout>

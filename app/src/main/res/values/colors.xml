@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fon_start">#A9D9C2</color>
+    <color name="ramka_poley">#AEB9BF</color>
+    <color name="priz_text">#025959</color>
+    <color name="knop">#023373</color>
+    <color name="ne_vazh">#025959</color>
+    <color name="fon_osn">#023373</color>
+    <color name="text">#A9D9C2</color>
+    <color name="ramka_knop">#AEB9BF</color>
+    <color name="dannie">#049DBF</color>
+</resources>

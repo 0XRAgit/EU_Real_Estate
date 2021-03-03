@@ -15,7 +15,92 @@
         android:textColor="@color/text"
         android:textSize="37sp"
         android:fontFamily="@font/droid_serif_italic"
-        android:gravity="center"/> 
+        android:gravity="center"
+        android:animateLayoutChanges="true"/>
 
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/Start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/robotocondensed_bold"
+        android:layout_marginBottom="15dp"
+        android:text="С чего начнём?"
+        app:defaultColor="@color/ramka_knop"
+        android:visibility="invisible"
+        android:animateLayoutChanges="true"/>
+
+    <LinearLayout
+        android:id="@+id/ramka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#eaebea"
+        android:padding="10sp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Кто Вы?"
+            android:gravity="center"
+            android:fontFamily="@font/robotocondensed_bold"
+            android:textColor="@color/fon_osn"
+            android:textSize="20sp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+        >
+            <android.support.v7.widget.AppCompatRadioButton
+             android:id="@+id/checkbox_chast"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Частный риелтор"
+             android:fontFamily="@font/open_sans_light"
+             android:textColor="@android:color/black"
+             android:textSize="20sp"/>
+
+         <android.support.v7.widget.AppCompatRadioButton
+             android:id="@+id/checkbox_agenstvo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Агенство по недвижемости"
+             android:fontFamily="@font/open_sans_light"
+             android:textColor="@android:color/black"
+             android:textSize="20sp"/>
+
+         <android.support.v7.widget.AppCompatRadioButton
+             android:id="@+id/checkbox_kompaniya"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Компания - застройщик"
+             android:fontFamily="@font/open_sans_light"
+             android:textColor="@android:color/black"
+             android:textSize="20sp"/>
+
+         <android.support.v7.widget.AppCompatRadioButton
+             android:id="@+id/checkbox_pokupatel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Покупатель/продавец"
+             android:fontFamily="@font/open_sans_light"
+             android:textColor="@android:color/black"
+             android:textSize="20sp"/>
+
+        </RadioGroup>
+
+        
+
+    </LinearLayout>
 
 </RelativeLayout>

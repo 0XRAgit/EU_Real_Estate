@@ -43,10 +43,10 @@
                 />
             <com.github.pinball83.maskededittext.MaskedEditText
                 android:id="@+id/masked_edit_text"
-                android:layout_width="155dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                app:mask="+7(###)###-##-##"
+                app:mask="+7 (###) ###-##-##"
                 app:notMaskedSymbol="#"
                 app:maskIconColor="@color/ramka_poley"
                 android:gravity="left"

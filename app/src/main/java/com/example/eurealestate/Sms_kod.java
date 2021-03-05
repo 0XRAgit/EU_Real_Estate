@@ -3,11 +3,10 @@ package com.example.eurealestate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -15,8 +14,8 @@ import android.widget.RadioGroup;
 import com.hanks.htextview.fall.FallTextView;
 import com.royrodriguez.transitionbutton.TransitionButton;
 
-import static android.view.View.VISIBLE;
 import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
 
 
 public class Sms_kod extends AppCompatActivity {
@@ -75,7 +74,7 @@ public class Sms_kod extends AppCompatActivity {
                         break;
                     case R.id.checkbox_kompaniya:
                         start.animate().alpha(1.0f);
-                        editor.putString("tip","chast");
+                        editor.putString("tip","komp");
                         editor.apply();
                         flag=true;
                         break;
@@ -140,6 +139,7 @@ public class Sms_kod extends AppCompatActivity {
 
                 case R.id.Start_button:
                     if(flag){
+                        ramka.animate().alpha(0.0f);
                         Intent intent =new Intent(Sms_kod.this,regist.class);
                         startActivity(intent);
                     }else{

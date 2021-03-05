@@ -7,6 +7,194 @@
     tools:context=".regist"
     android:background="@color/fon_osn">
 
+    <LinearLayout
+        android:id="@+id/realtor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="#eaebea"
+        android:padding="10sp"
+        android:animateLayoutChanges="true"
+        android:visibility="invisible"
+        android:alpha="0"
+        >
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:id="@+id/realtor_FIO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/fon_osn"
+            app:borderWidth="2dp"
+            app:cornerRadius="8dp"
+            android:padding="16dp"
+            app:animatedTextSize="10sp">
 
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="ФИО"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"/>
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:id="@+id/realtor_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/fon_osn"
+            app:borderWidth="2dp"
+            app:cornerRadius="8dp"
+            android:padding="16dp"
+            app:animatedTextSize="10sp"
+            android:layout_marginTop="10sp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"
+                android:inputType="textEmailAddress"/>
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/agenst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="#eaebea"
+        android:padding="10sp"
+        android:animateLayoutChanges="true"
+        android:alpha="0"
+        android:visibility="invisible"
+>
+
+
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:id="@+id/agenst_Naz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/fon_osn"
+            app:borderWidth="2dp"
+            app:cornerRadius="8dp"
+            android:padding="16dp"
+            app:animatedTextSize="10sp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Название компании"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"/>
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:id="@+id/agenst_yur_adres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/fon_osn"
+            app:borderWidth="2dp"
+            app:cornerRadius="8dp"
+            android:padding="16dp"
+            app:animatedTextSize="10sp"
+            android:layout_marginTop="10sp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Юридический адрес"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"/>
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:id="@+id/agenst_fackt_adres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/fon_osn"
+            app:borderWidth="2dp"
+            app:cornerRadius="8dp"
+            android:padding="16dp"
+            app:animatedTextSize="10sp"
+            android:layout_marginTop="10sp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Фактический адрес"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"/>
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:id="@+id/agenst_kol-vo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/fon_osn"
+            app:borderWidth="2dp"
+            app:cornerRadius="8dp"
+            android:padding="16dp"
+            app:animatedTextSize="10sp"
+            android:layout_marginTop="10sp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Число пользователей"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"
+                android:inputType="number"/>
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:id="@+id/agenst_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/fon_osn"
+            app:borderWidth="2dp"
+            app:cornerRadius="8dp"
+            android:padding="16dp"
+            app:animatedTextSize="10sp"
+            android:layout_marginTop="10sp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"
+                android:inputType="textEmailAddress"/>
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+    </LinearLayout>
+
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/Next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/robotocondensed_bold"
+        android:layout_marginBottom="15dp"
+        android:text="Готово"
+        app:defaultColor="@color/ramka_knop"
+        android:visibility="invisible"
+        android:animateLayoutChanges="true"
+        android:alpha="0.5"/>
 
 </RelativeLayout>

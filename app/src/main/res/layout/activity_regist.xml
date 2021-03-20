@@ -14,14 +14,14 @@
         android:orientation="vertical"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:background="#eaebea"
+        android:background="#BDDEF2"
         android:padding="10sp"
         android:animateLayoutChanges="true"
         android:visibility="invisible"
         android:alpha="0"
         >
         <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
-            android:id="@+id/realtor_FIO"
+            android:id="@+id/realtor_FIO_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:borderColor="@color/fon_osn"
@@ -31,6 +31,7 @@
             app:animatedTextSize="10sp">
 
             <EditText
+                android:id="@+id/realtor_FIO"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:hint="ФИО"
@@ -69,7 +70,7 @@
         android:orientation="vertical"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:background="#eaebea"
+        android:background="#BDDEF2"
         android:padding="10sp"
         android:animateLayoutChanges="true"
         android:alpha="0"
@@ -196,5 +197,16 @@
         android:visibility="invisible"
         android:animateLayoutChanges="true"
         android:alpha="0.5"/>
+
+    <com.hanks.htextview.fall.FallTextView
+        android:id="@+id/fadetextview_sms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:textColor="@color/text"
+        android:textSize="37sp"
+        android:fontFamily="@font/droid_serif_italic"
+        android:gravity="center"
+        android:animateLayoutChanges="true"/>
 
 </RelativeLayout>

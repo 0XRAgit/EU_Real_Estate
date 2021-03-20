@@ -41,6 +41,7 @@ public class Sms_kod extends AppCompatActivity {
         start.setOnClickListener(onClickListener);
         ramka = findViewById(R.id.ramka);
         start.isEnabled();
+        //textView.setTextColor(Color.parseColor("#023373"));
 
         chast = findViewById(R.id.checkbox_chast);
         agenst = findViewById(R.id.checkbox_agenstvo);
@@ -138,6 +139,8 @@ public class Sms_kod extends AppCompatActivity {
                 break;
 
                 case R.id.Start_button:
+
+
                     if(flag){
                         ramka.animate().alpha(0.0f);
                         Intent intent =new Intent(Sms_kod.this,regist.class);

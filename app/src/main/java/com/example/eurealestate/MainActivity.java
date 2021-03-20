@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                         vhod.stopAnimation(TransitionButton.StopAnimationStyle.EXPAND, new TransitionButton.OnAnimationStopEndListener() {
                             @Override
                             public void onAnimationStopEnd() {
-                                Intent intent = new Intent(getBaseContext(), Sms_kod.class);
+                                Intent intent = new Intent(getBaseContext(), MainMenu.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                 startActivity(intent);
                             }

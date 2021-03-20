@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:textColor="@color/text"
+        android:textColor="#BDDEF2"
         android:textSize="37sp"
         android:fontFamily="@font/droid_serif_italic"
         android:gravity="center"
@@ -30,7 +30,7 @@
         android:fontFamily="@font/robotocondensed_bold"
         android:layout_marginBottom="15dp"
         android:text="С чего начнём?"
-        app:defaultColor="@color/ramka_knop"
+        app:defaultColor="#BDDEF2"
         android:visibility="invisible"
         android:animateLayoutChanges="true"/>
 
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="#eaebea"
+        android:background="#BDDEF2"
         android:padding="10sp"
         android:orientation="vertical"
         android:visibility="invisible"
@@ -74,7 +74,7 @@
              android:id="@+id/checkbox_agenstvo"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Агенство по недвижемости"
+             android:text="Агентство по недвижемости"
              android:fontFamily="@font/open_sans_light"
              android:textColor="@android:color/black"
              android:textSize="20sp"/>

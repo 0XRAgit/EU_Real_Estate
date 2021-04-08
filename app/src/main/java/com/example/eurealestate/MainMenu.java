@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,7 +18,6 @@ import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
-    ImageButton pos;
     ListView listView;
     String[] Titel={"Čierna Orchidea", "Złoty Świt", "Μεγάλη Αφροδίτη", "Azzurro"};
     String[] Loc ={"Словакия, Братислава", "Польша, Варшава", "Кипр, Лимассол", "Италия, берег озера Комо"};
@@ -31,8 +29,6 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        pos=findViewById(R.id.pos);
-        pos.setOnClickListener(onClickListener);
         listView = findViewById(R.id.list_men);
 
         MyAdapter adapter = new MyAdapter(this, Titel, Loc, Price, Image);
@@ -58,10 +54,10 @@ public class MainMenu extends AppCompatActivity {
         public void onClick(View v) {
             Intent intent;
             switch (v.getId()){
-                case R.id.pos:
+/*                case R.id.pos:
                     intent=new Intent(MainMenu.this, googleMap.class);
                     startActivity(intent);
-                    break;
+                    break;*/
             }
         }
     };

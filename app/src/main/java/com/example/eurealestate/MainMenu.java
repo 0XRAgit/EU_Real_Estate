@@ -5,19 +5,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
+    BottomNavigationView bnm;
     ListView listView;
     String[] Titel={"Čierna Orchidea", "Złoty Świt", "Μεγάλη Αφροδίτη", "Azzurro"};
     String[] Loc ={"Словакия, Братислава", "Польша, Варшава", "Кипр, Лимассол", "Италия, берег озера Комо"};
@@ -30,37 +31,30 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         listView = findViewById(R.id.list_men);
+        bnm=findViewById(R.id.bnm);
+        bnm.setSelectedItemId(R.id.menu_sel);
 
         MyAdapter adapter = new MyAdapter(this, Titel, Loc, Price, Image);
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        bnm.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast toast= Toast.makeText(getApplicationContext(), String.valueOf(position),Toast.LENGTH_SHORT);
-                switch (position){
-                    default:
-                        toast.show();
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.map_sel:
+                        Intent intent = new Intent(MainMenu.this, googleMap.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
                 }
 
-
+                return false;
             }
         });
-
     }
 
-    View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent;
-            switch (v.getId()){
-/*                case R.id.pos:
-                    intent=new Intent(MainMenu.this, googleMap.class);
-                    startActivity(intent);
-                    break;*/
-            }
-        }
-    };
+
 
     class MyAdapter extends ArrayAdapter<String>{
 

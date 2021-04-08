@@ -1,76 +1,103 @@
 package com.example.eurealestate;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.location.Location;
+import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.SearchView;
+import android.view.MenuItem;
 
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
+
+import java.io.IOException;
+import java.util.List;
 
 public class googleMap extends FragmentActivity implements OnMapReadyCallback {
 
-    Location currentLocation;
-    FusedLocationProviderClient fusedLocationProviderClient;
-    private static final int REQUEST_CODE = 101;
+    BottomNavigationView bnm;
+    GoogleMap gm;
+    SupportMapFragment gmFragment;
+    android.support.v7.widget.SearchView sv;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_map);
+        sv = findViewById(R.id.search_map);
+        gmFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
 
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        fetchLastLocation();
 
-    }
 
-    private void fetchLastLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]
-                    {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
-            return;
-        }
-        Task<Location> task = fusedLocationProviderClient.getLastLocation();
-        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+
+        bnm=findViewById(R.id.bnm);
+        bnm.setSelectedItemId(R.id.map_sel);
+        bnm.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onSuccess(Location location) {
-              if(location !=null){
-                  currentLocation = location;
-                  SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
-                  supportMapFragment.getMapAsync(googleMap.this);
-              }
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.menu_sel:
+                        Intent intent = new Intent( googleMap.this, MainMenu.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
+                }
+
+                return false;
             }
         });
+
+        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                String location = sv.getQuery().toString();
+                List<Address> addressList = null;
+
+                if(location!=null || !location.equals("")){
+                    try{
+                        Geocoder geocoder = new Geocoder(googleMap.this);
+                        addressList = geocoder.getFromLocationName(location,1);
+                        while (addressList.size()==0){
+                            addressList = geocoder.getFromLocationName(location,1);
+                        }
+                        if(addressList.size()>0){
+                            Address address = addressList.get(0);
+                            LatLng latLng = new LatLng(address.getLatitude() , address.getLongitude());
+                            gm.addMarker(new MarkerOptions().position(latLng));
+                            gm.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,2));
+                        }
+                    }catch (IOException e){
+                        e.printStackTrace();;
+                    }
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
+        gmFragment.getMapAsync(this);
     }
+
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-        MarkerOptions markerOptions = new MarkerOptions().position(latLng);
-        googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,5));
-        googleMap.addMarker(markerOptions);
+        gm=googleMap;
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case REQUEST_CODE:
-                if (grantResults.length > 0 && grantResults[0] ==PackageManager.PERMISSION_GRANTED) {
-                    fetchLastLocation();
-                }
-                break;
-        }
-    }
+
+
+
 }

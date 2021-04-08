@@ -20,9 +20,13 @@
         />
 
     <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnm"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/knop"/>
+        android:layout_height="wrap_content"
+        android:background="@color/knop"
+        app:itemIconTint="@color/back"
+        app:menu="@menu/menu_nav"
+        />
 
 </RelativeLayout>

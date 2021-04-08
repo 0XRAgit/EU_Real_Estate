@@ -24,10 +24,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
+    //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
     testImplementation 'junit:junit:4.13'
     implementation 'com.github.pinball83:masked-edittext:1.0.4'
@@ -36,4 +38,5 @@ dependencies {
     implementation "com.hanks:htextview-base:0.1.6"
     implementation "com.hanks:htextview-fall:0.1.6"
     implementation "ss.anoop:awesome-textinput-layout:1.0.0"
+    implementation 'com.eldersoss:elderssearchview:1.0.0'
 }

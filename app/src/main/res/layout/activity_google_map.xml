@@ -4,13 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".googleMap">
+    tools:context=".googleMap"
+    android:orientation="vertical">
 
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/google_map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
+        />
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Поиск..."
+        app:iconifiedByDefault="false"
+        android:layout_margin="10dp"
+        android:elevation="5dp"
+        android:background="@drawable/bg_search"
+        />
+
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnm"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/knop"
+        app:itemIconTint="@color/back"
+        app:menu="@menu/menu_nav"
         />
 
 </RelativeLayout>

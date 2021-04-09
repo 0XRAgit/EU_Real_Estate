@@ -86,7 +86,7 @@
 
     <com.royrodriguez.transitionbutton.TransitionButton
         android:id="@+id/vhod_button"
-        android:layout_width="wrap_content"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/main_lin"
         android:layout_below="@+id/main_lin"
@@ -98,7 +98,7 @@
 
     <com.royrodriguez.transitionbutton.TransitionButton
         android:id="@+id/reg_button"
-        android:layout_width="wrap_content"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/main_lin"
         android:layout_below="@+id/main_lin"

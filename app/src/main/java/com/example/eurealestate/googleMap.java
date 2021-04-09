@@ -61,7 +61,6 @@ public class googleMap extends FragmentActivity implements OnMapReadyCallback {
             public boolean onQueryTextSubmit(String s) {
                 String location = sv.getQuery().toString();
                 List<Address> addressList = null;
-
                 if(location!=null || !location.equals("")){
                     try{
                         Geocoder geocoder = new Geocoder(googleMap.this);
@@ -73,7 +72,7 @@ public class googleMap extends FragmentActivity implements OnMapReadyCallback {
                             Address address = addressList.get(0);
                             LatLng latLng = new LatLng(address.getLatitude() , address.getLongitude());
                             gm.addMarker(new MarkerOptions().position(latLng));
-                            gm.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,2));
+                            gm.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
                         }
                     }catch (IOException e){
                         e.printStackTrace();;

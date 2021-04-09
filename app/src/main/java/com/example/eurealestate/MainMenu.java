@@ -41,9 +41,15 @@ public class MainMenu extends AppCompatActivity {
         bnm.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                Intent intent;
                 switch (menuItem.getItemId()){
                     case R.id.map_sel:
-                        Intent intent = new Intent(MainMenu.this, googleMap.class);
+                        intent = new Intent(MainMenu.this, googleMap.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.chat_sel:
+                        intent = new Intent(MainMenu.this, chat_pod.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;

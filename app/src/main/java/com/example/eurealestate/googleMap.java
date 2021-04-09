@@ -50,6 +50,11 @@ public class googleMap extends FragmentActivity implements OnMapReadyCallback {
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;
+                    case R.id.chat_sel:
+                        intent = new Intent(googleMap.this, chat_pod.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
                 }
 
                 return false;
@@ -65,9 +70,6 @@ public class googleMap extends FragmentActivity implements OnMapReadyCallback {
                     try{
                         Geocoder geocoder = new Geocoder(googleMap.this);
                         addressList = geocoder.getFromLocationName(location,1);
-                        while (addressList.size()==0){
-                            addressList = geocoder.getFromLocationName(location,1);
-                        }
                         if(addressList.size()>0){
                             Address address = addressList.get(0);
                             LatLng latLng = new LatLng(address.getLatitude() , address.getLongitude());

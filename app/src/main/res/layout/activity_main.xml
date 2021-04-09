@@ -22,7 +22,7 @@
             android:text="ВХОД И РЕГИСТРАЦИЯ"
             android:gravity="center"
             android:fontFamily="@font/robotocondensed_bold"
-            android:textColor="@android:color/black"
+            android:textColor="#023373"
             android:textSize="20sp"
             />
 

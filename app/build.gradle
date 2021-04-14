@@ -39,4 +39,5 @@ dependencies {
     implementation "com.hanks:htextview-fall:0.1.6"
     implementation "ss.anoop:awesome-textinput-layout:1.0.0"
     implementation 'com.eldersoss:elderssearchview:1.0.0'
+    implementation 'com.github.AnthonyFermin:DropDownView:1.0.1'
 }

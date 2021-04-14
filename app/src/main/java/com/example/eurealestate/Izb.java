@@ -2,11 +2,11 @@ package com.example.eurealestate;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,25 +16,23 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MainMenu extends AppCompatActivity {
-
+public class Izb extends AppCompatActivity {
     BottomNavigationView bnm;
     ListView listView;
-    String[] Titel={"Čierna Orchidea", "Złoty Świt", "Μεγάλη Αφροδίτη", "Azzurro"};
-    String[] Loc ={"Словакия, Братислава", "Польша, Варшава", "Кипр, Лимассол", "Италия, берег озера Комо"};
-    String[] Price ={"5.988.768,30 $", "3.570.210,00 $", "4.260.038,36 $","2.500.407,00 $"};
-    int[] Image ={R.drawable.fmain, R.drawable.smain,R.drawable.tm, R.drawable.fomain};
+    String[] Titel={"Azzurro"};
+    String[] Loc ={"Италия, берег озера Комо"};
+    String[] Price ={"2.500.407,00 $"};
+    int[] Image ={R.drawable.fomain};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
-
+        setContentView(R.layout.activity_izb);
         listView = findViewById(R.id.list_men);
         bnm=findViewById(R.id.bnm);
-        bnm.setSelectedItemId(R.id.menu_sel);
+        bnm.setSelectedItemId(R.id.izb_sel);
 
-        MyAdapter adapter = new MyAdapter(this, Titel, Loc, Price, Image);
+        Izb.MyAdapter adapter = new Izb.MyAdapter(this, Titel, Loc, Price, Image);
         listView.setAdapter(adapter);
 
 
@@ -44,17 +42,17 @@ public class MainMenu extends AppCompatActivity {
                 Intent intent;
                 switch (menuItem.getItemId()){
                     case R.id.map_sel:
-                        intent = new Intent(MainMenu.this, googleMap.class);
+                        intent = new Intent(Izb.this, googleMap.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;
                     case R.id.chat_sel:
-                        intent = new Intent(MainMenu.this, chat_pod.class);
+                        intent = new Intent(Izb.this, chat_pod.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;
-                    case R.id.izb_sel:
-                        intent = new Intent(MainMenu.this, Izb.class);
+                    case R.id.menu_sel:
+                        intent = new Intent(Izb.this, MainMenu.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;
@@ -65,9 +63,7 @@ public class MainMenu extends AppCompatActivity {
         });
     }
 
-
-
-    class MyAdapter extends ArrayAdapter<String>{
+    class MyAdapter extends ArrayAdapter<String> {
 
         Context fcontext;
         String[] ftitel;

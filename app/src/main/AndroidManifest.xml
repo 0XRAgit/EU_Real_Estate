@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".chat_pod"></activity>
+        <activity android:name=".Izb"></activity>
+        <activity android:name=".chat_pod" />
         <activity android:name=".googleMap" />
 
         <meta-data

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Izb"
+    android:background="#BDDEF2">
+
+
+
+    <TextView
+        android:id="@+id/text_izb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotocondensed_bold"
+        android:textColor="@color/fon_osn"
+        android:text="ИЗБРАННЫЕ ОБЪЕКТЫ:"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ListView
+        android:id="@+id/list_men"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:layout_alignBottom="@+id/bnm"
+        android:paddingBottom="55dp"
+        android:layout_below="@+id/text_izb"
+        />
+
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnm"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/knop"
+        app:itemIconTint="@color/back"
+        app:menu="@menu/menu_nav"
+        />
+
+</RelativeLayout>

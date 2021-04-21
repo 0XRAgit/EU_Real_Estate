@@ -47,6 +47,11 @@ public class chat_pod extends AppCompatActivity {
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;
+                    case R.id.lk_sel:
+                        intent = new Intent(chat_pod.this, Lich_kab.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
                 }
 
                 return false;

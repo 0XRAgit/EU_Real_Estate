@@ -60,6 +60,11 @@ public class googleMap extends FragmentActivity implements OnMapReadyCallback {
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;
+                    case R.id.lk_sel:
+                        intent = new Intent(googleMap.this, Lich_kab.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
                 }
 
                 return false;

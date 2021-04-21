@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Polsh"
+    android:background="@color/back">
+
+    <RelativeLayout
+        android:id="@+id/zag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fon_osn"
+        android:padding="5dp"
+        >
+        <ImageButton
+            android:id="@+id/back_but"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/back"
+            android:background="@drawable/back_vec"
+            android:padding="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/back"
+            android:fontFamily="@font/robotocondensed_bold"
+            android:text="ПЕНТХАУС ZLOTY SWIT"
+            android:textSize="20dp"
+            />
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/palci"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="30dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        >
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_palec"
+            android:backgroundTint="@color/fon_osn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            />
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_palec"
+            android:backgroundTint="@color/fon_osn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:rotation="180"
+            />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/zag"
+        android:layout_above="@+id/palci"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/slide_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/s1"
+        android:scaleType="centerCrop"
+        />
+    <TextView
+        android:id="@+id/slide_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/fon_osn"
+        android:textSize="15dp"
+        android:fontFamily="@font/robotocondensed_bold"
+        android:background="@color/back"
+        android:text=" Расположение объекта:Варшава, Сигизмунда Фогеля\n
+Цена объекта: 3 570 210,00$\n
+Кол-во комнат: 7"/>
+</RelativeLayout>

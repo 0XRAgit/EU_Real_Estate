@@ -56,6 +56,11 @@ public class Izb extends AppCompatActivity {
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;
+                    case R.id.lk_sel:
+                        intent = new Intent(Izb.this, Lich_kab.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
                 }
 
                 return false;

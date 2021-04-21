@@ -31,13 +31,13 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         listView = findViewById(R.id.list_men);
-        bnm=findViewById(R.id.bnm);
-        bnm.setSelectedItemId(R.id.menu_sel);
+
 
         MyAdapter adapter = new MyAdapter(this, Titel, Loc, Price, Image);
         listView.setAdapter(adapter);
 
-
+        bnm=findViewById(R.id.bnm);
+        bnm.setSelectedItemId(R.id.menu_sel);
         bnm.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -55,6 +55,11 @@ public class MainMenu extends AppCompatActivity {
                         break;
                     case R.id.izb_sel:
                         intent = new Intent(MainMenu.this, Izb.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.lk_sel:
+                        intent = new Intent(MainMenu.this, Lich_kab.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;

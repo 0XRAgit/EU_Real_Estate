@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Polsh"></activity>
+        <activity android:name=".Italy"></activity>
+        <activity android:name=".Polsh" />
         <activity android:name=".Lich_kab" />
         <activity android:name=".Izb" />
         <activity android:name=".chat_pod" />

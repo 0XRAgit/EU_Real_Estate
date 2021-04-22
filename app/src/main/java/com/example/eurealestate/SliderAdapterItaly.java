@@ -8,17 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-public class SliderAdapter extends PagerAdapter {
+public class SliderAdapterItaly extends PagerAdapter {
     Context context;
     LayoutInflater layoutInflater;
 
-    public SliderAdapter(Context context){
+    public SliderAdapterItaly(Context context){
         this.context = context;
     }
 
-    public int []images={R.drawable.s1,R.drawable.s2,R.drawable.s3,R.drawable.s4,R.drawable.s5,R.drawable.s6};
+    public int []images={R.drawable.fo1,R.drawable.fo2,R.drawable.fo3,R.drawable.fo4};
 
     @Override
     public int getCount() {

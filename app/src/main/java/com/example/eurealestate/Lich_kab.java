@@ -54,8 +54,9 @@ public class Lich_kab extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         break;
                     case 1:
-                        Toast toast1=Toast.makeText(getApplicationContext(), "1",Toast.LENGTH_LONG);
-                        toast1.show();
+                        intent = new Intent(Lich_kab.this, Italy.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
                         break;
                 }
             }

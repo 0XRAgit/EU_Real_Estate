@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -35,6 +36,25 @@ public class MainMenu extends AppCompatActivity {
 
         MyAdapter adapter = new MyAdapter(this, Titel, Loc, Price, Image);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
+                Intent intent;
+                switch (position){
+                    case 1:
+                        intent = new Intent(MainMenu.this, Polsh.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
+                    case 3:
+                        intent = new Intent(MainMenu.this, Italy.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
+                }
+            }
+        });
+
 
         bnm=findViewById(R.id.bnm);
         bnm.setSelectedItemId(R.id.menu_sel);

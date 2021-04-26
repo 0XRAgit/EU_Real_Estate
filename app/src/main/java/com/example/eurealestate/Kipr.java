@@ -1,30 +1,31 @@
 package com.example.eurealestate;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Polsh extends AppCompatActivity {
+public class Kipr extends AppCompatActivity {
 
     ImageButton back;
     ViewPager viewPager;
     ImageButton like, diz;
-    SliderAdapter sliderAdapter;
+    SliderAdapterKipr sliderAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_polsh);
+        setContentView(R.layout.activity_kipr);
+
         back = findViewById(R.id.back_but);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.back_but:
-                        Intent intent = new Intent(Polsh.this, Lich_kab.class);
+                        Intent intent = new Intent(Kipr.this, Lich_kab.class);
                         startActivity(intent);
                         break;
                 }
@@ -37,7 +38,7 @@ public class Polsh extends AppCompatActivity {
         like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Polsh.this, Italy.class);
+                Intent intent = new Intent(Kipr.this, Slovakiya.class);
                 startActivity(intent);
             }
         });
@@ -45,13 +46,13 @@ public class Polsh extends AppCompatActivity {
         diz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Polsh.this, Italy.class);
+                Intent intent = new Intent(Kipr.this, Polsh.class);
                 startActivity(intent);
             }
         });
 
         viewPager=findViewById(R.id.vP);
-        sliderAdapter = new SliderAdapter(this);
+        sliderAdapter = new SliderAdapterKipr(this);
 
         viewPager.setAdapter(sliderAdapter);
     }

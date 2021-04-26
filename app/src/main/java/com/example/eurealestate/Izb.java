@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -34,7 +35,19 @@ public class Izb extends AppCompatActivity {
 
         Izb.MyAdapter adapter = new Izb.MyAdapter(this, Titel, Loc, Price, Image);
         listView.setAdapter(adapter);
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
+                Intent intent;
+                switch (position){
+                    case 0:
+                        intent = new Intent(Izb.this, Italy.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
+                }
+            }
+        });
 
         bnm.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

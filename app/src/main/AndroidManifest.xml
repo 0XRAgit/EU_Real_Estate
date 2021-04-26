@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Italy"></activity>
+        <activity android:name=".Kipr"></activity>
+        <activity android:name=".Slovakiya" />
+        <activity android:name=".Italy" />
         <activity android:name=".Polsh" />
         <activity android:name=".Lich_kab" />
         <activity android:name=".Izb" />

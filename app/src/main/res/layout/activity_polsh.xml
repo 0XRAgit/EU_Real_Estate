@@ -16,7 +16,7 @@
         >
         <ImageButton
             android:id="@+id/back_but"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/back"
             android:background="@drawable/back_vec"
@@ -28,7 +28,7 @@
             android:layout_centerInParent="true"
             android:textColor="@color/back"
             android:fontFamily="@font/robotocondensed_bold"
-            android:text="ПЕНТХАУС ZLOTY SWIT"
+            android:text="Złoty Świt"
             android:textSize="20dp"
             />
     </RelativeLayout>
@@ -46,6 +46,7 @@
         android:paddingRight="100dp"
         >
         <ImageButton
+            android:id="@+id/like"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/ic_palec"
@@ -54,6 +55,7 @@
             android:layout_alignParentBottom="true"
             />
         <ImageButton
+            android:id="@+id/diz"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/ic_palec"

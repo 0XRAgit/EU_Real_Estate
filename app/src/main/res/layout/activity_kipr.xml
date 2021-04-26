@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Kipr"
     android:background="@color/back">
 
     <RelativeLayout
@@ -27,7 +28,7 @@
             android:layout_centerInParent="true"
             android:textColor="@color/back"
             android:fontFamily="@font/robotocondensed_bold"
-            android:text="Azzurro"
+            android:text="Μεγάλη Αφροδίτη"
             android:textSize="20dp"
             />
     </RelativeLayout>
@@ -80,10 +81,11 @@
         android:textColor="@color/fon_osn"
         android:textSize="15dp"
         android:fontFamily="@font/robotocondensed_bold"
-        android:text=" Геолокация:Берег озера Комо, ул. Лунго Ларио Триесте,47\n
-Цена: 2 500 407,00$\n
-360 м², 5 комнат"
+        android:text=" Геолокация: Лимассол, ул. Интирас Гканти , 31\n
+Цена: 4 260 038, 36$\n
+700 м², 8 комнат"
         android:layout_above="@+id/palci"
         android:padding="10dp"
         />
+
 </RelativeLayout>

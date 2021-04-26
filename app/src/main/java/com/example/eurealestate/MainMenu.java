@@ -30,7 +30,6 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
         listView = findViewById(R.id.list_men);
 
 
@@ -41,8 +40,18 @@ public class MainMenu extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
                 Intent intent;
                 switch (position){
+                    case 0:
+                        intent = new Intent(MainMenu.this, Slovakiya.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
                     case 1:
                         intent = new Intent(MainMenu.this, Polsh.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        break;
+                    case 2:
+                        intent = new Intent(MainMenu.this, Kipr.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         break;

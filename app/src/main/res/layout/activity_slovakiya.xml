@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Slovakiya"
     android:background="@color/back">
 
     <RelativeLayout
@@ -27,7 +28,7 @@
             android:layout_centerInParent="true"
             android:textColor="@color/back"
             android:fontFamily="@font/robotocondensed_bold"
-            android:text="Azzurro"
+            android:text="Čierna Orchidea"
             android:textSize="20dp"
             />
     </RelativeLayout>
@@ -80,9 +81,9 @@
         android:textColor="@color/fon_osn"
         android:textSize="15dp"
         android:fontFamily="@font/robotocondensed_bold"
-        android:text=" Геолокация:Берег озера Комо, ул. Лунго Ларио Триесте,47\n
-Цена: 2 500 407,00$\n
-360 м², 5 комнат"
+        android:text=" Геолокация: Братислава, ул. Лазаретская, 5\n
+Цена: 5 988 768, 30$\n
+810 м², 10 комнат"
         android:layout_above="@+id/palci"
         android:padding="10dp"
         />

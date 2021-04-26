@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 public class Italy extends AppCompatActivity {
     ImageButton back;
     ViewPager viewPager;
-
+    ImageButton like, diz;
     SliderAdapterItaly sliderAdapter;
 
     @Override
@@ -27,6 +27,25 @@ public class Italy extends AppCompatActivity {
                         startActivity(intent);
                         break;
                 }
+            }
+        });
+
+        like = findViewById(R.id.diz);
+        diz = findViewById(R.id.like);
+
+        like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Italy.this, Polsh.class);
+                startActivity(intent);
+            }
+        });
+
+        diz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Italy.this, Polsh.class);
+                startActivity(intent);
             }
         });
 
